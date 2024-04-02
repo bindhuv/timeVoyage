@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Design
 
-![timevoyage Design](/assets/timeVoyage.png)
+![timevoyage Design](src/assets/timeVoyage.png)

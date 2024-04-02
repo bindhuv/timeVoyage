@@ -1,0 +1,21 @@
+<a href="javascript:;" class="c-eventCard" (click)="openVerticallyCentered(content)">
+    <div class="c-eventCard-title">{{title}}</div>
+    <div class="c-eventCard-description">{{description}}</div>
+    <div class="c-eventCard-arrow">
+        <img src="../../assets/next.png" role="presentation">
+    </div>
+</a>
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">{{data.title}}</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<div class="c-eventCard-image">
+            <img src="../../assets/{{data.image}}">
+        </div>
+		<div class="c-eventCard-modalDesc">{{data.description}}</div>
+		<div class="c-eventCard-video">Watch This Video: <a [href]="data.video" target="_blank">{{data.video}}</a></div>
+	</div>
+</ng-template>
+

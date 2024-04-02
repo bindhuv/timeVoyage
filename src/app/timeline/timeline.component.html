@@ -1,0 +1,24 @@
+<div class="c-carousel__wrap">
+    <div class="c-carousel__inner">
+        <div class="c-carousel__scroll-block">
+            <div class="c-carousel__scroll-block-prevContainer">
+                <button type="button" class="c-carousel__scroll-block-prev" aria-label="previous skills"></button>
+            </div>
+            <div class="c-carousel__scroller">
+                <div class="c-carousel__scroller-area">
+                    <div class="c-carousel__scroller-card" *ngFor="let data of timelineData; let i = index">
+                        <div class="c-timeline-indicator" [style.background]="colors[i % colors.length]">
+                            {{data.date}}
+                        </div>
+                        <div class="c-timeline-event" [style.--data-color]="colors[i % colors.length]">
+                            <app-event-card [title]="data.title" [description]="data.description" [data]="data"></app-event-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c-carousel__scroll-block-nextContainer">
+                <button type="button" class="c-carousel__scroll-block-next" aria-label="next skills"></button>
+            </div>
+        </div>
+    </div>
+</div>
